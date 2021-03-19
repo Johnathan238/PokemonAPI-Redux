@@ -1,1 +1,16 @@
+* { 
+  margin: 0;
+	padding: 0; 
+}
 
+:root {
+--pink: #FF4E50;
+--yellow: #F9D423;
+--blue: #3498db;
+--green: #2ecc71;
+--black: #000;
+--light-black: #212121;
+--random: random(45) + deg;
+
+--background: linear-gradient($random, $blue, $green, $pink, $yellow);
+}
