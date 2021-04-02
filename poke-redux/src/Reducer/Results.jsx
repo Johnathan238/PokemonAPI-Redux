@@ -8,7 +8,8 @@ export const resultsReducer = (state = [], action) => {
         data: action.payload.results,
         errorMsg: "",
     }
-    
-    default:
-        return state
+
+        default:
+            return state
+    }
 }
