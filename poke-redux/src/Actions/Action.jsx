@@ -4,7 +4,7 @@ export const getPokemon = () => async dispatch => {
     const res = await GET_API.get('')
 
     dispatch({
-        type: 'GET_POKEMON'
+        type: 'GET_POKEMON',
         payload: res.data
     })
 }
