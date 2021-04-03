@@ -13,6 +13,19 @@ export default function TopPokemon() {
     },[])
 
     const renderTopPokemon = () => {
-        
+        return pok.map(pok => {
+            <li key={pok.data} className="list">
+                <img src={pok.sprites.front_default} />
+                <img src={pok.sprites.back_default} />
+                <li>{pok.ability.name}</li>
+            </li>
+        })
     }
+
+    return (
+        <div>
+            <h3>Pokemon's</h3>
+            <ul>{pok && renderTopPokemon()}</ul>
+        </div>
+    )
 }
