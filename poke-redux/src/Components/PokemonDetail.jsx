@@ -5,7 +5,7 @@ import { getPokemon } from '../Actions/Action'
 
 export default function TopPokemon() {
     const pok = useSelector( state => state.topPokemon )
-    const re = useSelector( state => state.re )
+    const results = useSelector( state => state.results )
     const dispatch = useDispatch()
 
     useEffect(() => {
@@ -14,7 +14,7 @@ export default function TopPokemon() {
 
     const renderTopPokemon = () => {
         return pok.map(pok => {
-            <li key={pok.data} className="list">
+            <li key={pok.results.data} className="list">
                 <img src={pok.sprites.front_default} />
                 <img src={pok.sprites.back_default} />
                 <li>{pok.ability.name}</li>
@@ -23,17 +23,13 @@ export default function TopPokemon() {
     }
 
     return (
-        <div>
-            {!pok && 
-            <p>Waiting on API...</p>}
-            {!re && 
+
 
 
         <div>
             <h3>Pokemon's</h3>
             <ul>{pok && renderTopPokemon()}</ul>
         </div>
-    }
-    </div>
+
     )
 }

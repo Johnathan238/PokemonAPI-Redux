@@ -3,9 +3,9 @@ export const resultsReducer = (state = [], action) => {
         case 'GET_POKEMON':
 
         return {
-        ...state,
+        ...state.data,
         loading: false,
-        data: action.payload.re,
+        data: action.payload.results,
         errorMsg: "NO_POKEMON",
     }
 
