@@ -14,7 +14,7 @@ export default function TopPokemon() {
 
     const renderTopPokemon = () => {
         return pok.map(pok => {
-            <li key={pok} className="list">
+            <li key={pok.data} className="list">
                 <img src={pok.sprites.front_default} />
                 <img src={pok.sprites.back_default} />
                 <li>{pok.ability.name}</li>
@@ -24,9 +24,9 @@ export default function TopPokemon() {
 
     return (
         <div>
-            {!news.length && 
-            <p>Waiting on Hacker News API...</p>}
-            {!results[0] && 
+            {!pok && 
+            <p>Waiting on API...</p>}
+            {!re && 
 
 
         <div>
