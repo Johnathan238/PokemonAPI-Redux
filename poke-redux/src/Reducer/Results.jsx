@@ -2,12 +2,9 @@ export const resultsReducer = (state = [], action) => {
     switch(action.type) {
         case 'GET_POKEMON':
 
-        return {
-        ...state,
-        loading: false,
-        data: action.payload.results,
-        errorMsg: "",
-    }
+            // Only show results with urls
+            const URL = [...action.payload.filter(pok => pok.url)]
+            return [...URL, ...state]
 
         default:
             return state

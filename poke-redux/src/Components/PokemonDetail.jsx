@@ -23,11 +23,17 @@ export default function TopPokemon() {
     }
 
     return (
+        <div>
+            {!news.length && 
+            <p>Waiting on Hacker News API...</p>}
+            {!results[0] && 
 
 
         <div>
             <h3>Pokemon's</h3>
             <ul>{pok && renderTopPokemon()}</ul>
         </div>
+    }
+    </div>
     )
 }
