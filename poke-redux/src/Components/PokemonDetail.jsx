@@ -28,7 +28,7 @@ export default function TopPokemon() {
 
         <div>
             <h3>Pokemon's</h3>
-            <ul>{pok && renderTopPokemon()}</ul>
+            <ul>{pok && results && renderTopPokemon()}</ul>
         </div>
 
     )
