@@ -1,6 +1,10 @@
-import { resultsReducer } from './Results'
-import { combineReducers } from 'redux'
+import {combineReducers} from "redux";
+import PokemonList from "./PokemonList";
+import PokemonMultipleReducer from "./PokemonMultipleReducer";
 
 export const rootReducer = combineReducers({
-    results: resultsReducer
+    PokemonList: PokemonList,
+    Pokemon: PokemonMultipleReducer
 })
+
+export default rootReducer;

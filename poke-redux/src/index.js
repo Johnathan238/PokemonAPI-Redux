@@ -7,6 +7,7 @@ import { createStore, compose, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
 import { rootReducer } from './Reducer/rootReducer.jsx'
+import { BrowserRouter as Router } from 'react-router-dom';
 
 //STORE -> GLOBALIZED STATE
 
@@ -15,11 +16,11 @@ const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 const store = createStore( rootReducer, composeEnhancer(applyMiddleware(thunk)))
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Router>
     <Provider store={store}>
       <App />
     </Provider>
-  </React.StrictMode>,
+  </Router>,
   document.getElementById('root')
 );
 
